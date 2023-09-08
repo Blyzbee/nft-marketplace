@@ -23,6 +23,6 @@ class User extends Authenticatable
 
     public function nfts()
     {
-        return $this->hasMany(Nft::class, 'owner_id');
+        return $this->belongsToMany(Nft::class);
     }
 }
