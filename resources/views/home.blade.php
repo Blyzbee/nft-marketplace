@@ -5,6 +5,9 @@
   <h1>NFTs disponibles à la vente</h1>
 
   <div class="row">
+    @if(auth()->check() && auth()->user()->isAdmin)
+    <a href="{{ route('addNft') }}">Ajouter un NFT</a>
+    @endif
     @foreach ($nfts as $nft)
     <div class="col-md-4 mb-4">
       <div class="card">
@@ -13,7 +16,7 @@
           <h5 class="card-title">{{ $nft->title }}</h5>
           <p class="card-text">Artiste: {{ $nft->artist }}</p>
           <p class="card-text">Prix: {{ $nft->price }} ETH</p>
-          <a href="{{ route('nft.show', ['id' => $nft->id]) }}" class="btn btn-primary">Détails</a>
+          <a href="{{ route('nfts.show', ['id' => $nft->id]) }}" class="btn btn-primary">Détails</a>
         </div>
       </div>
     </div>

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('email')->unique();
             $table->string('password');
+            $table->boolean('isAdmin')->default(false);
             $table->decimal('wallet', 10, 2)->default(20.00);
             $table->timestamps();
         });

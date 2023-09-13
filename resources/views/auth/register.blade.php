@@ -49,3 +49,12 @@
             <div class="form-group">
               <button type="submit" class="btn btn-primary">
                 {{ __("S'inscrire") }}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+@endsection

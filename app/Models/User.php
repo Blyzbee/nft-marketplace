@@ -14,6 +14,7 @@ class User extends Authenticatable
         'email',
         'password',
         'wallet',
+        'isAdmin',
     ];
 
     protected $hidden = [
@@ -23,6 +24,6 @@ class User extends Authenticatable
 
     public function nfts()
     {
-        return $this->belongsToMany(Nft::class);
+        return $this->hasMany(Nft::class, 'owner_id');
     }
 }

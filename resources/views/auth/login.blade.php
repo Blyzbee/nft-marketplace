@@ -45,6 +45,10 @@
                 {{ __('Connexion') }}
               </button>
             </div>
+
+            <div class="form-group">Vous n'avez pas de compte ? <a class="nav-link" href="{{ route('register') }}">
+                Inscrivez vous
+              </a></div>
           </form>
         </div>
       </div>
